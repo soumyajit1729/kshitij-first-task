@@ -1,0 +1,111 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+i {
+	color: white;
+	text-decoration: none;
+	padding: 14px 28px;
+	text-align: center;
+	font-weight: bold;	
+}
+i:hover{
+	background-color: #e6ecff;
+	color: #0033cc;
+}
+
+#kshitij{
+	max-width: 100%;
+	height: auto;
+}
+.event , h3 {
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 5px blue;
+}
+ul {
+	display: flex;
+	justify-content: flex-start;
+	position: fixed;
+	width: 100%;
+	z-index: +1;
+	background-color: rgba(0, 102, 255,0.8);
+}
+li {
+    display:inline-block;
+    float: left;
+}
+li a {
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+li:hover a {
+    background: white;
+    color: blue;
+}
+
+li ul {
+    display: none;
+}
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+.show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: +2;
+    border-radius: 10px;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+@media screen and (max-width : 760px){
+
+    ul {
+        position: fixed;
+        display: none;
+    }
+
+    li {
+        border-bottom: 1px solid white;
+    }
+
+    ul li, li a {
+        width: 100%;
+    }
+    .show-menu {
+        display:flex;
+    }
+}
